@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_list">
+
+    <fragment
+        android:id="@+id/nav_list"
+        android:name="com.thorhelgen.paafe.ui.ListFragment"
+        android:label="@string/menu_list"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_nav_list_to_nav_about"
+            app:destination="@id/nav_about" />
+        <action
+            android:id="@+id/action_nav_list_to_nav_record"
+            app:destination="@id/nav_record" />
+        <action
+            android:id="@+id/action_nav_list_to_nav_add"
+            app:destination="@id/nav_add" />
+        <action
+            android:id="@+id/action_nav_list_to_nav_settings"
+            app:destination="@id/nav_settings" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add"
+        android:name="com.thorhelgen.paafe.ui.AddRecFragment"
+        android:label="@string/menu_add"
+        tools:layout="@layout/fragment_record" >
+        <action
+            android:id="@+id/action_nav_add_to_nav_list"
+            app:destination="@id/nav_list" />
+        <action
+            android:id="@+id/action_nav_add_to_nav_about"
+            app:destination="@id/nav_about" />
+        <action
+            android:id="@+id/action_nav_add_to_nav_record"
+            app:destination="@id/nav_record" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_record"
+        android:name="com.thorhelgen.paafe.ui.RecordFragment"
+        android:label="@string/menu_list"
+        tools:layout="@layout/fragment_record" >
+        <action
+            android:id="@+id/action_nav_record_to_nav_about"
+            app:destination="@id/nav_about" />
+        <action
+            android:id="@+id/action_nav_record_to_nav_list"
+            app:destination="@id/nav_list" />
+        <action
+            android:id="@+id/action_nav_record_to_nav_add"
+            app:destination="@id/nav_add" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.thorhelgen.paafe.ui.SettingsFragment"
+        android:label="@string/settings_title"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_nav_settings_to_nav_list"
+            app:destination="@id/nav_list" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.thorhelgen.paafe.ui.AboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_nav_about_to_nav_add"
+            app:destination="@id/nav_add" />
+        <action
+            android:id="@+id/action_nav_about_to_nav_record"
+            app:destination="@id/nav_record" />
+        <action
+            android:id="@+id/action_nav_about_to_nav_list"
+            app:destination="@id/nav_list" />
+    </fragment>
+</navigation>
