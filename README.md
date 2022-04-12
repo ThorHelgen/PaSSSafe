@@ -1,6 +1,6 @@
 ## Pa$$$afe
 Simple Android app that can save your passwords.
-### Summury
+### Summary
 The application allows to create records with a login, password and description, view them and delete them. All records are stored in an encrypted database and are protected by a common password that use to access to the application.
 ### Key Features
 - DB records are encrypted by the AES 256 algorithm
